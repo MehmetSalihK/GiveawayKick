@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat en Direct avec Giveaway</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Kick</h1>
+            <form id="search-form">
+                <input type="text" id="channel-slug" placeholder="Entrez le slug du canal" required>
+                <button type="submit">Rechercher</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section id="left-content">
+            <h3>Giveaway</h3>
+            <div id="giveaway-controls">
+                <label for="command-input">Définir la Commande:</label>
+                <input type="text" id="command-input" placeholder="Entrez la commande ici...">
+                <label for="duration-input">Définir la Durée:</label>
+                <input type="number" id="duration-input" value="10" min="1" max="60" step="1">
+                <span>secondes</span>
+                <div class="button-group">
+                    <button id="start-giveaway">Démarrer le Tirage</button>
+                    <button id="cancel-giveaway">Annuler le Tirage</button>
+                    <button id="define-winner">Définir le Gagnant</button>
+                </div>
+            </div>
+        </section>                
+
+        <section id="chat-section">
+            <h2>Chat en Direct</h2>
+            <div id="chat-container" class="chat-box">
+                <!-- Les messages du chat apparaîtront ici -->
+            </div>
+        </section>
+
+        <section id="right-content">
+            <h3>Participants</h3>
+            <ul id="participants-list">
+                <!-- Les pseudonymes des participants s'afficheront ici -->
+            </ul>
+            <div id="results-display"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
